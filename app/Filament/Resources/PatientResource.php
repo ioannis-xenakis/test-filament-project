@@ -77,7 +77,13 @@ class PatientResource extends Resource
                     ->label('Owner\'s Phone Number'),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('type')
+                    ->options([
+                        'cat' => 'Cat',
+                        'dog' => 'Dog',
+                        'rabbit' => 'Rabbit',
+                        'snake' => 'Snake',
+                    ])
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
