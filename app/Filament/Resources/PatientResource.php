@@ -83,7 +83,11 @@ class PatientResource extends Resource
                         'dog' => 'Dog',
                         'rabbit' => 'Rabbit',
                         'snake' => 'Snake',
-                    ])
+                    ]),
+                Tables\Filters\SelectFilter::make('owner_id')
+                    ->label('Owner')
+                    ->relationship('owner', 'name')
+                    ->preload(),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
