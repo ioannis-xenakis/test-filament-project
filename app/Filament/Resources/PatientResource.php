@@ -24,16 +24,16 @@ class PatientResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name')
-                ->required()
-                ->maxLength(255),
+                    ->required()
+                    ->maxLength(255),
                 Forms\Components\Select::make('type')
-                ->options([
-                    'cat' => 'Cat',
-                    'dog' => 'Dog',
-                    'rabbit' => 'Rabbit',
-                    'snake' => 'Snake',
-                ])
-                ->required(),
+                    ->options([
+                        'cat' => 'Cat',
+                        'dog' => 'Dog',
+                        'rabbit' => 'Rabbit',
+                        'snake' => 'Snake',
+                    ])
+                    ->required(),
             ]);
     }
 
