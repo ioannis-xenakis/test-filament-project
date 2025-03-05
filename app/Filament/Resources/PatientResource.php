@@ -34,6 +34,9 @@ class PatientResource extends Resource
                         'snake' => 'Snake',
                     ])
                     ->required(),
+                Forms\Components\DatePicker::make('date_of_birth')
+                    ->required()
+                    ->maxDate(now()),
             ]);
     }
 
