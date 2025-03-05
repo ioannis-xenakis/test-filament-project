@@ -37,6 +37,11 @@ class PatientResource extends Resource
                 Forms\Components\DatePicker::make('date_of_birth')
                     ->required()
                     ->maxDate(now()),
+                Forms\Components\Select::make('owner_id')
+                    ->relationship('owner', 'name')
+                    ->searchable()
+                    ->preload()
+                    ->required(),
             ]);
     }
 
