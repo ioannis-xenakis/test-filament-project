@@ -74,7 +74,7 @@ class PatientResource extends Resource
                 Tables\Columns\TextColumn::make('owner.email')
                     ->label('Owner\'s Email Address'),
                 Tables\Columns\TextColumn::make('owner.phone')
-                    ->label('Phone Number'),
+                    ->label('Owner\'s Phone Number'),
             ])
             ->filters([
                 //
